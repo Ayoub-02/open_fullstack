@@ -23,8 +23,12 @@ sequenceDiagram
     server-->>browser: the javascript file
     deactivate server
 
+    The browser starts executing the JavaScript code that fetches the JSON from the server
+
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
     server-->>browser: [{"content": "", "date": "2026-04-23T08:03:43.565Z"}, ...]
     deactivate server
+
+    The browser executes the event handler that renders the notes
 ```
